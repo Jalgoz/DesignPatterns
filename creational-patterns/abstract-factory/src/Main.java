@@ -22,6 +22,9 @@ public class Main {
   public static void main(String[] args) {
     InterfaceCreation interfaceCreation = configureApplication();
     interfaceCreation.getButton().paint();
+    interfaceCreation.getCheckbox().paint();
     interfaceCreation.click(5);
+    System.out.println("------------");
+    interfaceCreation.paint();
   }
 }

@@ -28,15 +28,7 @@ public class InterfaceCreation {
     return button;
   }
 
-  public void setButton(Button button) {
-    this.button = button;
-  }
-
   public Checkbox getCheckbox() {
     return checkbox;
-  }
-
-  public void setCheckbox(Checkbox checkbox) {
-    this.checkbox = checkbox;
   }
 }
