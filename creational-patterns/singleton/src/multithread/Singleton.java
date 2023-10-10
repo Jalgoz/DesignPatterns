@@ -1,0 +1,42 @@
+package multithread;
+
+public class Singleton {
+  // The field must be declared volatile so that double check lock would work correctly.
+  private static volatile Singleton instance;
+
+  private String value;
+
+  private Singleton(String value) {
+    this.value = value;
+  }
+
+  public static Singleton getInstance(String value) {
+    // The approach taken here is called double-checked locking (DCL). It
+    // exists to prevent race condition between multiple threads that may
+    // attempt to get singleton instance at the same time, creating separate
+    // instances as a result.
+    //
+    // It may seem that having the `result` variable here is completely
+    // pointless. There is, however, a very important caveat when
+    // implementing double-checked locking in Java, which is solved by
+    // introducing this local variable.
+    Singleton result = instance;
+    if (result != null) { // We check if instance(result) exist
+      return result; // If exist we return instance(result)
+    }
+    synchronized(Singleton.class) { // This ensures that only one thread can access the code block at a time.
+      if (instance == null) { // We make double check
+        instance = new Singleton(value);
+      }
+      return instance;
+    }
+  }
+
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+}
