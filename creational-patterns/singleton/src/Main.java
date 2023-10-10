@@ -15,8 +15,8 @@ public class Main {
     Thread threadFoo = new Thread(new ThreadFoo());
     Thread threadBar = new Thread(new ThreadBar());
 
-    threadBar.start(); // Bar
-    threadFoo.start(); // Bar
+    threadBar.start(); // BAR
+    threadFoo.start(); // BAR
   }
 
   static class ThreadFoo implements Runnable {
