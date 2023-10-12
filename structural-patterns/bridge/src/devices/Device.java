@@ -15,18 +15,23 @@ public abstract class Device {
   public final boolean isEnabled() {
     return this.on;
   }
+
   public final void enable() {
     this.on = true;
   }
+
   public final void disable() {
     this.on = false;
   }
+
   public final int getVolume() {
     return this.volume;
   }
+
   public final void setVolume(int percent) {
     this.volume = percent;
   }
+
   public abstract Number getChannel();
   public abstract void channelUp();
   public abstract void channelDown();
