@@ -19,6 +19,7 @@ public class Main {
     rectangle.setColor("blue");
 
     Shape cloneRectangle = rectangle.clone();
+
     System.out.println(circle);
     System.out.println(cloneCircle);
     System.out.println(rectangle);

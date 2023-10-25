@@ -1,7 +1,5 @@
 package shapes;
 
-import java.util.Objects;
-
 public class Circle extends Shape {
   private int radius;
 

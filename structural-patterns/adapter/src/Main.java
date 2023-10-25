@@ -17,7 +17,7 @@ public class Main {
     SquarePegAdapter smallSquareAdapter = new SquarePegAdapter(smallSquare);
     SquarePegAdapter bigSquareAdapter = new SquarePegAdapter(bigSquare);
 
-    System.out.printf("Small square fits ? %b\n", roundHole.fits(smallSquareAdapter));
-    System.out.printf("Big square fits ? %b\n", roundHole.fits(bigSquareAdapter));
+    System.out.printf("Small square fits = %b\n", roundHole.fits(smallSquareAdapter));
+    System.out.printf("Big square fits = %b\n", roundHole.fits(bigSquareAdapter));
   }
 }
