@@ -5,10 +5,8 @@ import factory.ShipFactory;
 import factory.TruckFactory;
 
 public class Main {
-  private static Factory factory;
-
   public static void main(String[] args) {
-    factory = new PlaneFactory();
+    Factory factory = new PlaneFactory();
     Transport plane = factory.createTransport();
     plane.setModel("F32");
     plane.refuel();
