@@ -17,6 +17,6 @@ public class Plane extends Transport {
     if (!Double.isNaN(super.getFuel())) {
       System.out.println("Refueling in the tanker truck");
       super.setFuel(100);
-    };
+    }
   }
 }

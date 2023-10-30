@@ -27,6 +27,6 @@ public class Truck extends Transport {
     if (!Double.isNaN(super.getFuel())) {
       System.out.println("Refueling in the gas station");
       super.setFuel(100);
-    };
+    }
   }
 }
