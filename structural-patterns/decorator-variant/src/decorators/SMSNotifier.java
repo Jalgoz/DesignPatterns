@@ -36,7 +36,7 @@ public class SMSNotifier extends BaseNotifier {
 
   @Override
   public void sendNotification(String message) {
-    numberPhones.forEach(phone -> System.out.printf("SMS to %s: %s%n", phone, message));
     super.sendNotification(message);
+    numberPhones.forEach(phone -> System.out.printf("SMS to %s: %s%n", phone, message));
   }
 }
