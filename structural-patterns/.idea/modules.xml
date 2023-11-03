@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/adapter/adapter.iml" filepath="$PROJECT_DIR$/adapter/adapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bridge/bridge.iml" filepath="$PROJECT_DIR$/bridge/bridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/composite/composite.iml" filepath="$PROJECT_DIR$/composite/composite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/composite-simple/composite-simple.iml" filepath="$PROJECT_DIR$/composite-simple/composite-simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/decorator/decorator.iml" filepath="$PROJECT_DIR$/decorator/decorator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/decorator-variant/decorator-variant.iml" filepath="$PROJECT_DIR$/decorator-variant/decorator-variant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/facade/facade.iml" filepath="$PROJECT_DIR$/facade/facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flyweight/flyweight.iml" filepath="$PROJECT_DIR$/flyweight/flyweight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/structural-patterns.iml" filepath="$PROJECT_DIR$/.idea/structural-patterns.iml" />
+    </modules>
+  </component>
+</project>
