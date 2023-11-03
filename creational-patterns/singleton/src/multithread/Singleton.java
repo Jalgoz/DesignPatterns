@@ -11,15 +11,6 @@ public class Singleton {
   }
 
   public static Singleton getInstance(String value) {
-    // The approach taken here is called double-checked locking (DCL). It
-    // exists to prevent race condition between multiple threads that may
-    // attempt to get singleton instance at the same time, creating separate
-    // instances as a result.
-    //
-    // It may seem that having the `result` variable here is completely
-    // pointless. There is, however, a very important caveat when
-    // implementing double-checked locking in Java, which is solved by
-    // introducing this local variable.
     Singleton result = instance;
     if (result != null) { // We check if instance(result) exist
       return result; // If exist we return instance(result)
@@ -28,6 +19,7 @@ public class Singleton {
       if (instance == null) { // We make double check
         instance = new Singleton(value);
       }
+
       return instance;
     }
   }
