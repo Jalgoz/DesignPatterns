@@ -25,9 +25,8 @@ public class Main {
 
       if (strategyOption.equals("1")) {
         System.out.println("Choose the transport type");
-        AtomicInteger indexPublicTransport = new AtomicInteger(0);
         Arrays.stream(PublicTransportTypes.values()).forEach(transport ->
-            System.out.printf("%d. %s\n", indexPublicTransport.getAndIncrement(), transport));
+            System.out.printf("%d. %s\n", transport.ordinal(), transport));
         String transportType = READER.readLine();
 
         strategy = new PublicTransportStrategy(PublicTransportTypes.values()[Integer.parseInt((transportType))]);
@@ -46,7 +45,7 @@ public class Main {
   }
 
   private static void menu() {
-    System.out.println("Choose a option to begin the tour: ");
+    System.out.println("Choose an option to begin the tour: ");
     System.out.println("1. Public transport ");
     System.out.println("2. Walking\n");
   }
