@@ -8,7 +8,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
   private static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
