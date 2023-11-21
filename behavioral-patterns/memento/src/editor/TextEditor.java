@@ -5,7 +5,7 @@ import history.EditorMemento;
 /**
  * Originator class
  */
-public class TextEditor {
+public class TextEditor implements Memento {
   private String content;
 
   public void setContent(String content) {
@@ -16,10 +16,12 @@ public class TextEditor {
     return content;
   }
 
+  @Override
   public EditorMemento save() {
     return new EditorMemento(content);
   }
 
+  @Override
   public void restore(EditorMemento memento) {
     this.content = memento.getContent();
   }
