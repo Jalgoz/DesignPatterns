@@ -22,31 +22,25 @@ public class Editor implements Mediator {
   private List list;
   private Filter filter;
 
-  private JLabel titleLabel = new JLabel("Title:");
-  private JLabel textLabel = new JLabel("Text:");
-  private JLabel label = new JLabel("Add or select existing note to proceed...");
+  private final JLabel titleLabel = new JLabel("Title:");
+  private final JLabel textLabel = new JLabel("Text:");
+  private final JLabel label = new JLabel("Add or select existing note to proceed...");
 
+  /**
+   * Here the registrations of components by the mediator
+   */
   @Override
   public void registerComponent(Component component) {
     component.setMediator(this);
 
-    /**
-     * Here the registrations of components by the mediator
-     */
     switch (component.getName()) {
-      case "AddButton":
-        addButton = (AddButton)component;
-        break;
-      case "DelButton":
-        deleteButton = (DeleteButton)component;
-        break;
-      case "Filter":
-        filter = (Filter)component;
-        break;
-      case "List":
-        list = (List)component;
+      case "AddButton" -> addButton = (AddButton) component;
+      case "DelButton" -> deleteButton = (DeleteButton) component;
+      case "Filter" -> filter = (Filter) component;
+      case "List" -> {
+        list = (List) component;
         this.list.addListSelectionListener(listSelectionEvent -> {
-          Note note = (Note)list.getSelectedValue();
+          Note note = (Note) list.getSelectedValue();
 
           if (note != null) {
             getInfoFromList(note);
@@ -54,16 +48,10 @@ public class Editor implements Mediator {
             clear();
           }
         });
-        break;
-      case "SaveButton":
-        saveButton = (SaveButton)component;
-        break;
-      case "TextBox":
-        textBox = (TextBox)component;
-        break;
-      case "Title":
-        title = (Title)component;
-        break;
+      }
+      case "SaveButton" -> saveButton = (SaveButton) component;
+      case "TextBox" -> textBox = (TextBox) component;
+      case "Title" -> title = (Title) component;
     }
   }
 
