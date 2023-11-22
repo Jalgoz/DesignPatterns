@@ -2,6 +2,9 @@ package observers;
 
 import weather.Weather;
 
+/**
+ * This class represents a weather station
+ */
 public class WeatherStation implements Observer {
   private WeatherState weatherState;
   private double currentTemperature;

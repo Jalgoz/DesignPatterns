@@ -2,6 +2,10 @@ package observers;
 
 import weather.Weather;
 
+/**
+ * This class represents a Storm Alert Notifies,
+ * it can send an alert
+ */
 public class StormAlertNotifier implements Observer {
   private boolean stormAlert;
 

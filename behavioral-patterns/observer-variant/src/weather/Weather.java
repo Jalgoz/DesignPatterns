@@ -2,6 +2,9 @@ package weather;
 
 import publisher.Publisher;
 
+/**
+ * This class represents the weather
+ */
 public class Weather {
   private final Publisher publisher;
   private double temperature = 0;

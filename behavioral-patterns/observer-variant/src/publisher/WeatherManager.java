@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * This class notify to the observer the changes in the weather
+ */
 public class WeatherManager implements Publisher {
   private final List<Observer> observers = new ArrayList<>();
 
