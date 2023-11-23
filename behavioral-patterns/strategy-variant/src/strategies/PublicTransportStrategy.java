@@ -2,7 +2,7 @@ package strategies;
 
 import transport.PublicTransportTypes;
 
-public class PublicTransportStrategy implements Navigator {
+public class PublicTransportStrategy implements RouteStrategy {
   private final PublicTransportTypes transportType;
 
   public PublicTransportStrategy(PublicTransportTypes transportType) {

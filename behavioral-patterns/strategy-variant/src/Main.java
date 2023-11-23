@@ -1,6 +1,6 @@
-import strategies.Navigator;
-import strategies.PublicTransportStrategy;
 import strategies.RouteStrategy;
+import strategies.PublicTransportStrategy;
+import strategies.Navigator;
 import strategies.WalkingStrategy;
 import transport.PublicTransportTypes;
 
@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class Main {
   private static final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
-  private static final RouteStrategy routeStrategy = new RouteStrategy();
+  private static final Navigator NAVIGATOR = new Navigator();
   private static final String ROUTE_START = "Calacoto";
   private static final String ROUTE_END = "Cota cota";
 
@@ -19,7 +19,7 @@ public class Main {
     menu();
 
     try {
-      Navigator strategy;
+      RouteStrategy strategy;
       String strategyOption = READER.readLine();
 
       if (strategyOption.equals("1")) {
@@ -36,8 +36,8 @@ public class Main {
         strategy = new WalkingStrategy(startTime);
       }
 
-      routeStrategy.setStrategy(strategy);
-      routeStrategy.initRoute(ROUTE_START, ROUTE_END);
+      NAVIGATOR.setStrategy(strategy);
+      NAVIGATOR.initRoute(ROUTE_START, ROUTE_END);
     } catch (IOException e) {
       throw new RuntimeException(e);
     }

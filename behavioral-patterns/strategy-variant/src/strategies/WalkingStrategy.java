@@ -1,6 +1,6 @@
 package strategies;
 
-public class WalkingStrategy implements Navigator {
+public class WalkingStrategy implements RouteStrategy {
   private final String timeStart;
 
   public WalkingStrategy(String timeStart) {
